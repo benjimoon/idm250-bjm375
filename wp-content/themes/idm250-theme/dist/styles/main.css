@@ -16,14 +16,14 @@ html {
     font-size: 4rem;
     color: black;
 }
-#menu-primary-menu-1-container{
+.nav{
     width: 100%;
     background-color: var(--background-color);
     box-shadow: rgba(206, 206, 206, 0.2) 0px 7px 16px 0px;
 }
-#menu-primary-menu-1.menu{
-    font-weight: bold;
-    color: var(--bg-three);
+.nav {
+font-weight: bold;
+color: var(--bg-three);
 font-family: 'IBM Plex Mono';
   min-height: 10vh;
   width: 100%;
@@ -32,19 +32,36 @@ font-family: 'IBM Plex Mono';
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  list-style-type: none;
+  list-style-type: none; 
+  z-index: 999;
 }
-ul#menu-primary-menu-1.menu {
+.nav ul {
 display: flex;
 justify-content: space-between;
 align-items: center;
-width: 50%;
+width: 40%;
 list-style-type: none;
 flex-direction: row;
 }
-ul#menu-primary-menu-1.menu a {
+.nav ul a {
 text-decoration: none;
 color: black;
+}
+.menu-primary-menu-1-container {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+width: 30%;
+list-style-type: none;
+flex-direction: row;
+}
+.menu-primary-menu-1-container ul {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+width: 90%;
+list-style-type: none;
+flex-direction: row;
 }
 footer {
     margin: auto;
@@ -58,6 +75,11 @@ footer {
     overflow-x: auto;
     border-style: solid none none none;
     
+}
+.logo {
+    width: 220px;
+    height: 70px;
+    padding: 1rem;
 }
 footer a {
     text-decoration: none;
@@ -80,3 +102,14 @@ footer a {
     text-align: center;
     font-family: Space Grotesk;
 }
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    }
+    .logo a img {
+        display: block;
+        max-width: 250px;
+        height: auto;
+        }

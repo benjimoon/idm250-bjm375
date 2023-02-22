@@ -48,5 +48,24 @@ add_action('init', 'register_theme_menus');
 
 
 
+function register_custom_post_types()
+{
+    // Register Albums post type
+    register_post_type(
+        'blogs',
+        [
+            'labels' => [
+                'name' => __('Blogs'),
+                'singular_name' => __('Blog')
+            ],
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'blogs'],
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'show_in_rest' => true,
+        ]
+    );
+}
 
+add_action('init', 'register_custom_post_types');
 ?>
