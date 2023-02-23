@@ -12,7 +12,7 @@ wp_enqueue_style(
 );
 wp_enqueue_style(
     'google-fonts',
-    'https://fonts.googleapis.com/css?family=IBM Plex Mono',
+    'https://fonts.google.com/specimen/Space+Grotesk',
     [],
     null
 );
@@ -48,24 +48,24 @@ add_action('init', 'register_theme_menus');
 
 
 
-function register_custom_post_types()
-{
-    // Register Albums post type
-    register_post_type(
-        'blogs',
-        [
-            'labels' => [
-                'name' => __('Blogs'),
-                'singular_name' => __('Blog')
-            ],
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => ['slug' => 'blogs'],
-            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
-            'show_in_rest' => true,
-        ]
-    );
-}
+// function register_custom_post_types()
+// {
+//     // Register Albums post type
+//     register_post_type(
+//         'blogs',
+//         [
+//             'labels' => [
+//                 'name' => __('Blogs'),
+//                 'singular_name' => __('Blog')
+//             ],
+//             'public' => true,
+//             'has_archive' => true,
+//             'rewrite' => ['slug' => 'blogs'],
+//             'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+//             'show_in_rest' => true,
+//         ]
+//     );
+// }
 
-add_action('init', 'register_custom_post_types');
-?>
+// add_action('init', 'register_custom_post_types');
+// ?>

@@ -9,22 +9,34 @@ html {
   }
 :root {
     --background-color: white;
-    --bg-two: #00871E;
+    --bg-two: #006D18;
     --bg-three:#000;
 }
-.content-blocks {
+.content-blocks h1{
+    padding-top: 8rem;
     font-size: 4rem;
-    color: black;
+    color: var(--bg-two);
+    font-family: 'Space Grotesk';
+    text-align: center;
+    font-weight: normal;
+}
+.content-blocks h6{
+    padding-top: .5rem;
+    font-size: 2rem;
+    color: #727272;
+    font-family: 'Helvetica Neue';
+    text-align: center;
+    font-weight: normal;
 }
 .nav{
     width: 100%;
     background-color: var(--background-color);
     box-shadow: rgba(206, 206, 206, 0.2) 0px 7px 16px 0px;
+    z-index: 999;
 }
 .nav {
-font-weight: bold;
 color: var(--bg-three);
-font-family: 'IBM Plex Mono';
+font-family: 'Space Grotesk';
   min-height: 10vh;
   width: 100%;
   margin: auto;
@@ -34,6 +46,7 @@ font-family: 'IBM Plex Mono';
   flex-direction: row;
   list-style-type: none; 
   z-index: 999;
+  position: fixed;
 }
 .nav ul {
 display: flex;
@@ -46,6 +59,7 @@ flex-direction: row;
 .nav ul a {
 text-decoration: none;
 color: black;
+font-weight: normal;
 }
 .menu-primary-menu-1-container {
     display: flex;
@@ -68,7 +82,7 @@ footer {
     padding: 3rem;
     padding-bottom: 3rem;
     position: sticky;
-    font-family: 'IBM Plex Mono';
+    font-family: 'Space Grotesk';
     color: var(--bg-three);
     background: white;
     width: 100%;
@@ -77,8 +91,8 @@ footer {
     
 }
 .logo {
-    width: 220px;
-    height: 70px;
+    width: 120px;
+    height: 50px;
     padding: 1rem;
 }
 footer a {
@@ -96,20 +110,22 @@ footer a {
     font-weight: bold;
 }
 .content-blocks {
+    padding-top: 5rem;
     padding-bottom: 10rem;
 }
 .content-blocks p {
     text-align: center;
-    font-family: Space Grotesk;
+    font-family: 'Space Grotesk';
 }
-.logo a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    }
-    .logo a img {
-        display: block;
-        max-width: 250px;
-        height: auto;
-        }
+.wp-block-cover__image-background .wp-image-62 {
+padding-top: 10rem;
+width: 100%;
+height: 300px;
+}
+.content-blocks h2 {
+    font-size: 2rem;
+    color: var(--bg-two);
+    font-family: 'Space Grotesk';
+    text-align: center;
+    font-weight: normal;
+}

@@ -1,3 +1,6 @@
+
 <?php get_header();?>
-this is page php
-<?php get_footer();?>
+
+<?php get_template_part('components/content'); ?>
+
+<?php get_footer(); ?>
