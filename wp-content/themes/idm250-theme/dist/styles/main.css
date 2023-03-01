@@ -239,6 +239,21 @@ padding-bottom: 0rem;
   padding-top: 2rem;
   padding-bottom: 0rem;
   }
+  .wp-block-gallery-1 {
+    padding: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+  .wp-block-gallery-3 {
+    padding: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+  .wp-block-gallery-5 {
+    padding: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
 .blog-blocks ul {
   text-align: left;
   margin: auto;
@@ -335,6 +350,18 @@ padding-bottom: 0rem;
           .wp-block-gallery-4 {
           padding: 2rem;
           padding-bottom: 0rem;
+          }
+          .wp-block-gallery-1 {
+            padding: 2rem;
+            padding-bottom: 0rem;
+          }
+          .wp-block-gallery-3 {
+            padding-top: 2rem;
+            padding-bottom: 0rem;
+          }
+          .wp-block-gallery-5 {
+            padding: 2rem;
+            padding-bottom: 0rem;
           }
           .wp-block-gallery-6{
             padding: 2rem;
