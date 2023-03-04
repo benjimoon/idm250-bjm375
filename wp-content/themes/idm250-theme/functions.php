@@ -10,12 +10,12 @@ wp_enqueue_style(
     'all'
 
 );
-wp_enqueue_style(
-    'google-fonts',
-    'https://fonts.google.com/specimen/Space+Grotesk',
-    [],
-    null
-);
+// wp_enqueue_style(
+//     'google-fonts',
+//     'https://fonts.google.com/specimen/Space+Grotesk',
+//     [],
+//     null
+// );
 wp_enqueue_script(
     'idm250-scripts', 
     get_template_directory_uri() . '/dist/scripts/main.js', 

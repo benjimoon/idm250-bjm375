@@ -13,6 +13,10 @@ html {
     --bg-three:#000;
     --bg-four:#727272;
 }
+@font-face {
+  font-family: 'Space Grotesk' ;
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+}
 .content-blocks h1{
     /* padding-top: 8rem; */
     font-size: 4rem;
