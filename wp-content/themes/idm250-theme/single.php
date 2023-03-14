@@ -1,5 +1,4 @@
 <?php get_header();?>
-this is single php
 
 <?php
 $currentPostId = get_the_id();

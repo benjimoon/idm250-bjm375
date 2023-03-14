@@ -81,6 +81,12 @@ function register_custom_taxonomies()
 }
 add_action('init', 'register_custom_taxonomies');
 
+$args = [
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'order' => 'DESC',
+    'orderby' => 'date',
+];
 
 // function register_custom_post_types()
 // {

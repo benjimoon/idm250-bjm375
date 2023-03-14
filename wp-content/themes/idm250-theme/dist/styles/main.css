@@ -100,15 +100,14 @@ flex-direction: row;
 footer {
     margin: auto;
     padding: 3rem;
-    padding-bottom: 3rem;
     position: sticky;
     font-family: 'Space Grotesk';
-    color: var(--bg-three);
-    background: white;
+    color: white;
+    background: var(--bg-two);
     width: 100%;
+    height: auto;
     overflow-x: auto;
-    border-style: solid none none none;
-    
+    line-height: 3rem;
 }
 .logo {
     width: 120px;
@@ -118,13 +117,12 @@ footer {
 footer a {
     text-decoration: none;
     list-style-type: none;
-    color: black;
+    color: white;
 }
 
 .page_item{
     color: black;
     list-style-type: none;
-    padding: 1rem;
 }
 .copyright-footer {
     font-weight: bold;
@@ -134,6 +132,7 @@ footer a {
     grid-template-columns: 1fr;
     padding-top: 3rem;
     padding-bottom: 10rem;
+    width: 100%;
 }
 .content-blocks {
     display: grid;
@@ -141,7 +140,7 @@ footer a {
     grid-template-columns: 1fr;
     padding: 2rem;
     padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
 }
 .blog-blocks p {
     text-align: left;
@@ -156,7 +155,7 @@ footer a {
 .blog-blocks h2 {
   text-align: center;
   font-family: 'Space Grotesk'; 
-  font-size: 2.5rem;
+  font-size: 3rem;
   padding-top: 4rem;
   padding-bottom: 0rem;
 }
@@ -164,6 +163,7 @@ footer a {
   text-align: center;
   font-family: 'Space Grotesk'; 
   font-size: 1.5rem;
+  padding: 4rem;
   padding-top: 4rem;
   padding-bottom: 0rem;
 }
@@ -281,6 +281,7 @@ padding-bottom: 0rem;
   font-style: italic;
   color: var(--bg-four);
   text-align: center;
+  padding: 1rem;
 }
 .wp-image-127 {
   display: block;
@@ -330,16 +331,37 @@ padding-bottom: 0rem;
           transform: translateX(-100%);
         }
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 800px) {
+        .wp-block-cover {
+          width: 100%;
+          background-repeat: no-repeat;
+          background-position: center; 
+          background-size: cover;
+        }
+        .wp-block-table {
+          padding: 1rem;
+        }
         .content-blocks h1 {
          font-size: 2.5rem;
         }
         .blog-blocks p{
           padding: 2rem;
+          font-size: 1rem;
+        }
+        .wp-block-image.size-full {
+          width: 320px;
+          margin: auto;
+          display: block;
         }
         .content-blocks h6 {
             font-size: 2rem;
         }
+        .content-blocks h5 {
+          font-size: 1rem;
+      }
+      .has-large-font-size {
+        font-size: 1rem;
+      }
         .blog-blocks ul {
           padding: 2rem;
           text-align: left;
@@ -362,7 +384,8 @@ padding-bottom: 0rem;
             padding-bottom: 0rem;
           }
           .wp-block-gallery-3 {
-            padding-top: 2rem;
+          
+            padding: 2rem;
             padding-bottom: 0rem;
           }
           .wp-block-gallery-5 {
@@ -419,6 +442,7 @@ text-align: center;
 .wp-block-embed__wrapper {
   display: block;
   margin: auto;
+  padding: 0rem;
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 0rem;
@@ -443,4 +467,170 @@ display: block;
   padding: 4rem;
   font-family: 'Space Grotesk';
   width: 800px;
+}
+@media screen and (max-width: 800px) {
+.wp-image-127 {
+  width: 320px;
+}
+.wp-block-table {
+  display: block;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Space Grotesk';
+  width: 500px;
+}
+.wp-block-embed {
+ padding: 0rem;
+ width: 320px;
+ text-align: center;
+ margin: auto;
+}
+.blog-blocks p {
+  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+}
+}
+.featured-img {
+  width: 1200px;
+  height: auto;
+  margin: auto;
+  display: block;
+  filter: brightness(70%);
+}
+.all-featured {
+  margin: auto;
+  width: 1200px;
+  padding-bottom: 2rem;
+  line-height: 1.5rem;
+  position: relative;
+	text-align: center;
+	color: white;
+}
+.featured-link {
+  font-family: 'Space Grotesk';
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 2.5rem;
+  position: absolute;
+  top: -60%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px #000;
+}
+.featured-time {
+  margin: auto;
+  width: 1200px;
+  font-family: 'Helvetica Neue';
+  color: var(--background-color);
+  padding-top: 2rem;
+  position: absolute;
+  top: -60%;
+  left: -40.5%;
+}
+.featured-excerpt {
+  font-family: 'Helvetica Neue';
+}
+.sidebar-content h5 {
+ text-align: left;
+ padding-left: 3rem;
+}
+.wp-block-media-text.is-image-fill {
+  padding-right: 5rem;
+}
+.sidebar-content h6 {
+  text-align: left;
+  padding-left: 3rem;
+ }
+.sidebar-content h4 {
+  text-align: left;
+  padding-left: 3rem;
+  padding-bottom: 0rem;
+ }
+ .sidebar-content h1 {
+  text-align: left;
+  padding-left: 3rem;
+  padding-bottom: 0rem;
+  padding-top: 2rem;
+ }
+ .sidebar-content h2 {
+  text-align: left;
+  padding-left: 3rem;
+  padding-top: 0rem;
+ }
+ .sidebar-content p {
+  text-align: left;
+  padding: 0rem;
+ }
+ .wp-block-media-text__media img {
+  padding: 2rem;
+  padding-right: 5rem;
+ }
+ .wp-block-media-text {
+padding-top: 2rem;
+ }
+.sidebar-content ul {
+  padding: 0rem;
+}
+.sidebar-content ol {
+  padding: 0rem;
+}
+.wp-block-media-text__content {
+padding: 0rem;
+}
+.sidebar-content cite {
+  font-family: 'Helvetica Neue';
+}
+@media screen and (max-width: 800px) {
+  .sidebar-content h5 {
+    text-align: center;
+    padding: 0rem;
+   }
+   .sidebar-content h6 {
+     text-align: center;
+     padding: 0rem;
+    }
+   .sidebar-content h4 {
+    text-align: center;
+     padding: 0rem;
+    }
+    .sidebar-content h1 {
+      text-align: center;
+     padding: 0rem;
+    }
+    .wp-block-media-text__media img {
+      padding: 0rem;
+      padding-right: 0rem;
+     }
+     .wp-block-media-text {
+    padding: 2rem;
+    padding-top: 2rem;
+     }
+    .sidebar-content h2 {
+      text-align: center;
+     padding: 0rem;
+    }
+    .sidebar-content p {
+     text-align: left;
+     padding: 0rem;
+    }
+    .wp-block-media-text__media img {
+     padding: 2rem;
+    }
+   .sidebar-content ul {
+     padding: 0rem;
+   }
+   .sidebar-content ol {
+     padding: 0rem;
+   }
+   .wp-block-media-text__content {
+   padding: 5rem;
+   }
+   .wp-block-media-text.is-image-fill {
+    padding: 2rem;
+  }
+   .wp-block-media {
+    width: 100%;
+    margin: auto;
+   }
 }

@@ -9,10 +9,10 @@ WHOOPS...
 <p class="error-title">
 PAGE NOT FOUND
 </p>
-<form class="error-button-link">
+<div class="error-button-link">
 <a href="<?php echo site_url();?>">
           <button class="error-button">BACK TO HOME</button>
           </a>
-        </form>
+</div>
 </div>
 <?php get_footer(); ?>
