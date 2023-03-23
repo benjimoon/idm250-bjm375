@@ -13,6 +13,13 @@ html {
     --bg-three:#000;
     --bg-four:#727272;
 }
+body {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
 @font-face {
   font-family: 'Space Grotesk' ;
   src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2');
@@ -23,22 +30,6 @@ html {
     color: var(--bg-two);
     font-family: 'Space Grotesk';
     font-weight: normal;
-    width: 14.5ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-}
-@keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
   }
 .content-blocks h6{
     padding-top: .5rem;
@@ -128,8 +119,6 @@ footer a {
     font-weight: bold;
 }
 .blog-blocks {
-    display: grid;
-    grid-template-columns: 1fr;
     padding-top: 3rem;
     padding-bottom: 10rem;
     width: 100%;
@@ -212,6 +201,7 @@ footer a {
     text-align: center;
     font-weight: normal;
     padding: 1rem;
+    padding-top: 4rem;
 }
 .wp-block-pullquote p {
   text-align: left;
@@ -293,7 +283,7 @@ padding-bottom: 0rem;
 .hamburger {
     display: none;
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1063px) {
         .hamburger {
           display: block;
           cursor: pointer;
@@ -323,7 +313,7 @@ padding-bottom: 0rem;
           background: var(--bg-two);
           transition: all 0.5s ease;
         }
-        .nav_links ul a {
+        .nav ul a {
           color: white;
         }
         .nav-open {
@@ -345,7 +335,7 @@ padding-bottom: 0rem;
          font-size: 2.5rem;
         }
         .blog-blocks p{
-          padding: 2rem;
+          padding: 1rem;
           font-size: 1rem;
         }
         .wp-block-image.size-full {
@@ -363,12 +353,12 @@ padding-bottom: 0rem;
         font-size: 1rem;
       }
         .blog-blocks ul {
-          padding: 2rem;
+          padding: 3rem;
           text-align: left;
         }
         .blog-blocks ol {
 
-          padding: 2rem;
+          padding: 3rem;
           text-align: left;
         }
         .wp-block-group {
@@ -455,11 +445,17 @@ text-align: center;
   color: var(--background-color);
   background:var(--bg-two); 
   font-family: 'Space Grotesk';
+  display: block;
+  justify-content: center;
 }
-.wp-block-buttons {
+.wp-block-button {
 margin: auto;
 padding-top: 4rem;
 display: block;
+justify-content: center;
+}
+.is-layout-flex {
+  justify-content: center;
 }
 .wp-block-table {
   display: block;
@@ -479,6 +475,9 @@ display: block;
   font-family: 'Space Grotesk';
   width: 500px;
 }
+.blog-blocks h5 {
+padding: 1rem;
+}
 .wp-block-embed {
  padding: 0rem;
  width: 320px;
@@ -486,7 +485,7 @@ display: block;
  margin: auto;
 }
 .blog-blocks p {
-  padding: 2rem;
+  padding: 3rem;
   padding-top: 2rem;
   padding-bottom: 0rem;
 }
@@ -495,7 +494,6 @@ display: block;
   width: 1200px;
   height: auto;
   margin: auto;
-  display: block;
   filter: brightness(70%);
 }
 .all-featured {
@@ -506,17 +504,6 @@ display: block;
   position: relative;
 	text-align: center;
 	color: white;
-}
-.featured-link {
-  font-family: 'Space Grotesk';
-  text-decoration: none;
-  color: var(--background-color);
-  font-size: 2.5rem;
-  position: absolute;
-  top: -60%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px #000;
 }
 .featured-time {
   margin: auto;
@@ -546,6 +533,7 @@ display: block;
   text-align: left;
   padding-left: 3rem;
   padding-bottom: 0rem;
+  padding-top: 4rem;
  }
  .sidebar-content h1 {
   text-align: left;
@@ -556,7 +544,7 @@ display: block;
  .sidebar-content h2 {
   text-align: left;
   padding-left: 3rem;
-  padding-top: 0rem;
+  padding-top: 3rem;
  }
  .sidebar-content p {
   text-align: left;
@@ -586,6 +574,7 @@ padding: 0rem;
     text-align: center;
     padding: 0rem;
    }
+
    .sidebar-content h6 {
      text-align: center;
      padding: 0rem;
@@ -593,6 +582,7 @@ padding: 0rem;
    .sidebar-content h4 {
     text-align: center;
      padding: 0rem;
+     padding-top: 4rem;
     }
     .sidebar-content h1 {
       text-align: center;
@@ -633,4 +623,98 @@ padding: 0rem;
     width: 100%;
     margin: auto;
    }
+   .wp-block-table {
+    width: 350px;
+  padding: 1rem;
+  }
+}
+.featured-img {
+  max-width: 800px;
+  height: 380px;
+  object-fit: cover;
+  margin: auto;
+
+}
+.featured-title {
+  position: relative;
+  color: black;
+  font-size: 2rem;
+  font-family: 'Space Grotesk';
+  padding-top: 1rem;
+}
+.all-recent {
+  padding: 2rem;
+}
+.featured-link {
+  text-decoration: none;
+}
+.exc {
+  font-family: 'Helvetica Neue';
+  color: var(--bg-four);
+  max-width: 800px;
+  line-height: 1.5rem;
+}
+.archive-all {
+  padding-top: 10rem;
+  margin: auto;
+}
+.all-recent {
+  margin: auto;
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+.archive-all h1 {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .featured-img {
+    max-width: 400px;
+    height: 380px;
+    object-fit: cover;
+    margin: auto;
+  }  
+  .all-recent {
+    max-width: 500px;
+  
+  }
+
+}
+.error-all {
+  padding-bottom: 10rem;
+}
+@media screen and (max-width: 500px) {
+  .featured-img {
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+  }  
+  .all-recent {
+    max-width: 350px;
+  }
+  .exc {
+    max-width: 300px;
+  }
+  .featured-title {
+    font-size: 1.5rem;
+  }
+.error-title {
+  font-size: 2rem;
+}
+.error-color {
+  font-size: 2rem;
+}
+}
+@media screen and (max-width: 1000px) {
+.wp-block-media-text {
+  display: block;
+}
 }

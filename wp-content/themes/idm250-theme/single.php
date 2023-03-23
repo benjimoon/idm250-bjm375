@@ -7,7 +7,7 @@ $terms = get_the_terms($currentPostId, 'category');
 
 if ($terms) {
     foreach ($terms as $term) {
-        echo "<span>{$term->name}</span>";
+        echo "";
     }
 }
 ?>

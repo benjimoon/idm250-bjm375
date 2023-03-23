@@ -1,16 +1,51 @@
-<?php get_header();?>
-<!-- <h1><?php echo get_the_title();?></h1> -->
-<div class="content-blocks">
-    <?php 
-    if (have_posts()) {
-        while (have_posts()) {
-            the_post();
-            the_content();
-        }
-    } else {
-        echo 'no posts found';
-    }
-    ?>
-</div>
+<?php
+/**
+ * This component is used to display the recent 3 blog posts.
+ * We use the WP_Query class to get the posts.
+ * @link https://developer.wordpress.org/reference/classes/wp_query/
+ */
 
-<?php get_footer();?>
+$args = [
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'order' => 'DESC',
+    'orderby' => 'date',
+];
+$blog_posts_query = new WP_Query($args);
+
+?>
+<div class="content-blocks">
+
+<?php 
+
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        the_content();
+    }
+} else {
+    echo 'no posts found';
+}
+
+?>
+<div class="" data-component="recent-blog">
+  <div class="">
+    <div class="">
+    </div>
+    <div class="">
+      <?php
+        // The Loop
+        if ($blog_posts_query->have_posts()) {
+            while ($blog_posts_query->have_posts()) {
+                // This is where the post's data is set up
+                $blog_posts_query->the_post();
+                get_template_part('components/archive-card');
+            }
+            // Restore original Post Data
+            wp_reset_postdata();
+        } else {
+            echo '<p>Sorry, no posts matched your criteria.</p>';
+        }?>
+    </div>
+  </div>
+</div>

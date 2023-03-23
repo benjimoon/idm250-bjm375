@@ -1,10 +1,12 @@
 <?php
+/* Template Name: Archive Listing */
 get_header();
-$title = get_the_archive_title();
-
-$description = get_the_archive_description();
 ?>
-<div class="">
-<?php get_template_part('components/content-archive');?>
+
+<div class=""
+  data-component="">
+  <div class="archive-all">
+    <?php get_template_part('components/content-archive'); ?>
+  </div>
 </div>
-<?php get_footer();?>
+<?php get_footer(); ?>

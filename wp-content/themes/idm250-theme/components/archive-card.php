@@ -4,7 +4,9 @@
  * It should be used inside a loop.
  */
 ?>
+
 <section class="all-recent">
+
   <a class="featured-link" href="<?php echo get_the_permalink(); ?>">
   <img src="<?php echo get_the_post_thumbnail_url(); ?>"
       alt="<?php echo get_the_title(); ?> Featured Image"
